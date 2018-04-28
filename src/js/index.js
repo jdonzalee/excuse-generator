@@ -9,11 +9,23 @@ import 'bootstrap';
 //include your own styles
 // import '../style/index.scss';
 
-window.onload = function(){
-    
+window.onload = function () {
+     document.querySelector(".button").addEventListener('click', buttonClicked);
+};
+
+function buttonClicked (){
+ 
   let nouns = ['dog','car','clock'];
   let verbs = ['died', 'stopped', 'broke'];
   let pronouns = ['my','Our','Their'];
+  
+  var myVariable = generateExcuse(pronouns, nouns, verbs);
+  console.log(myVariable);
+ 
+ document.querySelector(".mt-5").innerHTML = myVariable;
+ 
+ 
+}
   
   function generateExcuse (A,B,C) {
       
@@ -26,11 +38,17 @@ window.onload = function(){
       return sentence; 
   }
   
-var myVariable = generateExcuse(pronouns, nouns, verbs);
   
-console.log(myVariable);
-    
-};
+  
+  
+  
+   
+
+
+
+// function daButton(); {
+//     let daButton =document.querySelector('.daButton')
+// }
     
     
     // var pronouns = [
